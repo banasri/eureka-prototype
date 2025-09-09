@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elder Connect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inline-group">
+        <h2>User Registration</h2>
+        <img
+          src="images/logo.jpeg"
+          alt="Elder Connect Logo"
+          class="logo"
+          height="100px"
+        />
+      </div>
+
+      <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <div class="inline-group">
+          <div class="form-field">
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="form-field">
+            <label for="emergencyContact">Emergency Contact:</label>
+            <input
+              type="tel"
+              id="emergencyContact"
+              name="emergencyContact"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="inline-group">
+          <div class="form-field">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required />
+          </div>
+
+          <div class="form-field">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" pattern="\d*" required />
+          </div>
+        </div>
+
+        <label>Interests:</label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="interests" value="old movies" /> Old
+            movies</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="gardening" />
+            Gardening</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="spiritual talks" />
+            Spiritual talks</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="music" />
+            Music</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="cooking" />
+            Cooking</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="reading" />
+            Reading</label
+          >
+          <br />
+          <label>Any other interests:</label>
+          <input type="text" id="otherInterests" name="otherInterests" />
+        </div>
+
+        <label>Language Preferences:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="language" value="Hindi" required />
+            Hindi</label
+          >
+          <label
+            ><input type="radio" name="language" value="English" required />
+            English</label
+          >
+          <label
+            ><input type="radio" name="language" value="Regional" required />
+            Regional</label
+          >
+        </div>
+
+        <label>Preferred Group Size:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="groupSize" value="5-10" required /> 5-10
+            members</label
+          >
+          <label
+            ><input type="radio" name="groupSize" value="10-15" required />
+            10-15 members</label
+          >
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+      <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="loginForm">
+        <h2>Admin Login</h2>
+        <label for="adminUsername">Username:</label>
+        <input type="text" id="adminUsername" required />
+        <label for="adminPassword">Password:</label>
+        <input type="password" id="adminPassword" required />
+        <button onclick="login()">Login</button>
+      </div>
+
+      <div id="dashboardContent" style="display: none">
+        <div class="header">
+          <h2>Admin Dashboard</h2>
+          <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="filters">
+          <label for="locationFilter">Filter by Location:</label>
+          <input type="text" id="locationFilter" />
+
+          <label for="interestFilter">Filter by Interest:</label>
+          <input type="text" id="interestFilter" />
+
+          <button onclick="fetchUsers()">Apply Filters</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Interests</th>
+              <th>Verified</th>
+              <th>Action</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>
